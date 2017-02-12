@@ -1,0 +1,32 @@
+<script src="../src/js/main.js"></script>
+<script  type="text/html" id="singleApp">
+    <% for(var i=0;i< data.length; i++){ %>
+    <%  var app= data[i]%>
+    <li>
+        <div class="left_logo"><img src=<%=app.logo_url%> alt=""></div>
+        <div class="content" id="container">
+            <h1><%=app.name%></h1>
+            <ul class="rank">
+                <%for(var x=0; x< app.star; x++) {%>
+                <% if(x< star){%>
+                <li><img src="src/img/icon_star_orange.png" alt=""></li>
+               <%}else{%>
+                <li><img src="src/img/icon_star_grey.png" alt=""></li>
+                <%}%>
+                <%}%>
+            </ul>
+            <div class="cate">
+                <span><%=app.catelist[0]%></span>
+                <span><%=app.catelist[1]%></span>
+                <span><%=app.catelist[2]%></span>
+            </div>
+            <div class="owner">
+                出品机构:<span><%=app.owner%></span>
+            </div>
+        </div>
+        <div class="arrow">
+            <span class="showQR"></span>
+        </div>
+    </li>
+    <%{%>
+</script>

@@ -1,0 +1,404 @@
+/*reset start*/
+* {
+    font-family: "PingFang SC", "微软雅黑", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+}
+
+/*html {*/
+    /*-webkit-text-size-adjust: 100%;*/
+    /*-ms-text-size-adjust: 100%;*/
+/*}*/
+
+body, dl, dt, dd, ul, ol, h1, h2, h3, h4, h5, h6, form, input, textarea, p, table, th, td {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    width: 100%;
+    background: #fff;
+}
+
+input, select, button, textarea {
+    vertical-align: middle;
+    font-size: 12px;
+    outline: none
+}
+
+ol, ul {
+    list-style: none
+}
+
+img {
+    border: 0
+}
+
+em {
+    font-style: normal
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+textarea {
+    resize: none
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: #464646
+}
+
+a:hover {
+    text-decoration: none;
+    color: #464646
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+.clearfix:after {
+    content: " ";
+    overflow: hidden;
+    clear: both;
+    display: block;
+    height: 0
+}
+
+/*reset end*/
+
+body {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.main {
+    width: 100%;
+    height: 12.06rem;
+}
+/*nav start*/
+.header {
+    width: 100%;
+    height: 1.19rem;
+    border-bottom: 0.01rem solid #dadada;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.header .logo {
+    width: 1.61rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header .logo span {
+    width: 1.31rem;
+    height: 0.6rem;
+    background: url("../img/logo_orange@2x.png") no-repeat;
+    background-size: cover;
+}
+
+.header .right_content {
+    display: flex;
+    width: 5.89rem;
+    height: 100%;
+    align-items: center;
+}
+
+.header .right_content .logo_name {
+    width: 1.68rem;
+    margin-left: .11rem;
+    border-left: 0.01rem solid #e5e5e5;
+    height: .62rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: .29rem;
+    color: #999;
+    line-height: .29rem;
+}
+
+.header .right_content .logo_code {
+    width: 3.79rem;
+    height: 0.48rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .right_content .logo_code span {
+    width: .48rem;
+    height: .48rem;
+    background: url("../img/mobile_code.png");
+    background-size: cover;
+}
+
+/*nav start*/
+
+.main nav {
+    z-index: 8;
+    width: 7.5rem;
+    height: 1.79rem;
+}
+
+.main nav ul {
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main nav ul:nth-of-type(2) {
+    display: none;
+}
+
+.main nav ul li {
+    text-indent: .3rem;
+    background-color: #f1f1f1;
+    font-size: .27rem;
+    color: #666666;
+    letter-spacing: .03rem;
+    width: 1.8577rem;
+    height: .87rem;
+    line-height: .87rem;
+    border-bottom: .01rem solid #d8d8d8;
+}
+
+.underline {
+    display: block;
+    background-color: #ff5700;
+    width: .6rem;
+    height: .02rem;
+    position: absolute;
+    top: 1.81rem;
+    left: .31rem;
+    z-index: 10;
+}
+
+.main nav ul #hidden {
+    display: flex;
+    align-items: center;
+    order: 20;
+}
+
+.up {
+    height: .6rem;
+    width: .6rem;
+}
+
+.down {
+    height: .6rem;
+    width: .6rem;
+    position: absolute;
+    right: .4rem;
+    top: 2.25rem;
+
+}
+
+
+/*nav  end*/
+
+/*app start */
+.main .app{
+    width: 100%
+}
+.main .app ul li{
+    height: 2.55rem;
+    width: 100%;
+    border-bottom: .02rem solid #dadada;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.main .app ul li .left_logo{
+    width: 1.8rem;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: .3rem;
+}
+.main .app ul li .left_logo img{
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin-top: .29rem;
+    background-color: #fee064;
+    border: 1px solid #e5e5e5
+}
+.main .app ul li .content{
+    width: 4.41rem;
+}
+.main .app ul li .content  h1{
+    display: flex;
+    font-size:.32rem;
+    color: #333;
+    margin-left: .21rem;
+    margin-bottom: .03rem;
+    height: .7rem;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: .1rem;
+}
+.main .app ul li .content .rank{
+    height: .69rem;
+    width: 4.91rem ;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-left: .21rem;
+    align-items: center;
+}
+.main .app ul li .content .rank li{
+    display: flex;
+    width: .25rem;
+    height: .25rem;
+    margin-right: .1rem;
+    border: none;
+}
+.main .app ul li .content .rank li img{
+    display: flex;
+    width: .25rem;
+    height: .25rem;
+}
+.main .app ul li .content .cate{
+    width: 4.91rem;
+    margin-left: .21rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    height: .2rem;
+    margin-bottom: .2rem;
+    font-size: .22rem;
+    line-height: .2rem;
+    color: #999;
+}
+.main .app ul li .content .cate span:first-child{
+    margin-left: .2rem;
+}
+.main .app ul li .content .cate span{
+    font-size: .22rem;
+    height: .2rem;
+    line-height: .2rem;
+    color: #999;
+    margin-right: .2rem;
+}
+.main .app ul li .content .owner{
+    width: 4.91rem;
+    margin-left: .21rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    font-size: .22rem;
+    color: #999;
+    line-height: .2rem;
+}
+.main .app ul li .content .owner span{
+    font-size: .22rem;
+    height: .2rem;
+    line-height: .2rem;
+    color: #999;
+    margin-left: .17rem;
+}
+.arrow{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.arrow  span{
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url("../img/icon_arrow.png") no-repeat;
+    background-size: cover;
+}
+    /*app end */
+
+
+
+/*displayQR start*/
+.displayQR {
+    width: 7.5rem;
+    position: fixed;
+    z-index: 99999;
+    background-color: #fff;
+    align-items: flex-start;
+    display: none;
+    height: 6.22rem;
+    left: 0;
+    bottom: 0;
+}
+
+.displayQR .title {
+    height: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .32rem;
+    color: #333;
+}
+
+.displayQR .close {
+    position: absolute;
+    width: 1.01rem;
+    height: 1.01rem;
+    top: 0;
+    right: 0;
+    background: url("../img/icon_close.png") no-repeat;
+    background-size: cover;
+}
+
+.displayQR .QRcode {
+    height: 3.1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.displayQR .QRcode img {
+    width: 3rem;
+    height: 3rem;
+}
+.displayQR .text .msg{
+    display: block;
+    font-size: .22rem;
+    height: .22rem;
+    line-height: .22rem;
+    color: #fe6112;
+    letter-spacing: .01rem;
+}
+.displayQR .text{
+    height: 1.74rem;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.displayQR .text h2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: .22rem;
+    height: .22rem;
+    line-height: .22rem;
+    color: #fe6112;
+    letter-spacing: .01rem;
+}
+/*displayQR end*/

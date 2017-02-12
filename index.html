@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="src/css/index.css">
+    <script>
+        (function (doc, win) {
+            var _root = doc.documentElement,
+                    resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    resizeCallback = function () {
+                        var clientWidth = _root.clientWidth,
+                                fontSize = 10*10;
+                        if (!clientWidth) return;
+                        if(clientWidth < 1080) {
+                            fontSize = 100*(clientWidth / 750);
+                        } else {
+                            fontSize = 100*(1080 / 750);
+                        }
+                        _root.style.fontSize = fontSize + 'px';
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvent, resizeCallback, false);
+            doc.addEventListener('DOMContentLoaded', resizeCallback, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+  <section  class="main">
+      <header  class="header">
+          <div class="logo">
+              <span></span>
+          </div>
+          <div class="right_content">
+            <h1 class="logo_name">小程序商店</h1>
+            <div class="logo_code"><span id="yuanzimao_code"></span></div>
+          </div>
+
+      </header>
+
+      <nav id="nav">
+          <ul>
+              <li id="firstLi" class="firstLi">全部</li>
+              <li>购物</li>
+              <li>教育</li>
+              <li>健康</li>
+              <li>阅读</li>
+              <li>理财</li>
+              <li id="moreCur">出行</li>
+              <li id="more">更多</li>
+              <li>生活服务</li>
+              <li>政务民生</li>
+              <li>餐饮</li>
+              <li>旅游</li>
+              <li>社交</li>
+              <li>多媒体</li>
+              <li>工具</li>
+              <li>快递物流</li>
+              <li>商业服务</li>
+              <li>公益</li>
+              <li>体育</li>
+              <li id="hidden"><span>收起</span><img src="src/img/icon_up.png" alt="" class="up"></li>
+          </ul>
+          <div id="underline"></div>
+
+          <img src="src/img/icon_more.png" alt="" class="down">
+      </nav>
+
+
+
+      <div class="app">
+          <ul id="wrapper">
+              <li>
+                  <div class="left_logo"><img src="" alt=""></div>
+                  <div class="content">
+                    <h1>深睡大师</h1>
+                      <ul class="rank">
+                          <li><img src="src/img/icon_star_orange.png" alt=""></li>
+                          <li><img src="src/img/icon_star_orange.png" alt=""></li>
+                          <li><img src="src/img/icon_star_orange.png" alt=""></li>
+                          <li><img src="src/img/icon_star_orange.png" alt=""></li>
+                          <li><img src="src/img/icon_star_grey.png" alt=""></li>
+                      </ul>
+                      <div class="cate">
+                          <span>工具</span>
+                          <span>生活</span>
+                          <span>多媒体</span>
+                      </div>
+
+                      <div class="owner">
+                          出品机构:<span>深睡大师</span>
+                      </div>
+                  </div>
+                  <div class="arrow">
+                      <span></span>
+                  </div>
+              </li>
+          </ul>
+      </div>
+  </section>
+
+  <section class="displayQR" id="displayQR">
+      <div class="title" id="title">原子猫公众号</div>
+      <div class="QRcode"><img  id="qrCode" src="src/img/product_2d.png" alt=""></div>
+      <div class="text">
+          <h1 class="msg"></h1>
+          <h2 class="tips">长按扫二维码, 关注原子猫公众号</h2>
+      </div>
+
+      <div class="close" id="close"></div>
+  </section>
+</body>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/clipboard/dist/clipboard.min.js"></script>
+<script src="src/js/utils.js"></script>
+<script src="vendors/baiduT.js"></script>
+<script  type="text/html" id="singleApp">
+    <% for(var i=0;i< data.length; i++){ %>
+    <%  var app= data[i]%>
+    <li class="app" qrUrl=<%=app.qrcode_url%> appName=<%=app.name%>>
+        <div class="left_logo"><img src=<%=app.logo_url%> alt=""></div>
+        <div class="content" id="container">
+            <h1><%=app.name%></h1>
+            <ul class="rank">
+                <%for(var x=0; x< 5; x++) {%>
+                <% if(x< app.star){%>
+                <li><img src="src/img/icon_star_orange.png" alt=""></li>
+                <%}else{%>
+                <li><img src="src/img/icon_star_grey.png" alt=""></li>
+                <%}%>
+                <%}%>
+            </ul>
+            <div class="cate">分类:
+                <span><%=app.catelist[0]%></span>
+                <span><%=app.catelist[1]%></span>
+                <span><%=app.catelist[2]%></span>
+            </div>
+            <div class="owner">
+                出品机构:<span><%=app.owner%></span>
+            </div>
+        </div>
+        <div class="arrow">
+            <span class="showQR" data-clipboard-text=<%=app.name%> > </span>
+        </div>
+    </li>
+    <%}%>
+</script>
+<script src="src/js/nav.js"></script>
+<script src="src/js/main.js"></script>
+
+</html>
